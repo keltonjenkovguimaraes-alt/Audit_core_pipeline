@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audit-core"
+version = "0.1.0"
+description = "A domain-agnostic numerical audit pipeline: flags inconsistencies in numbers, statistics, and formulas across any results document, without auto-correcting them."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Your Name"}]
+dependencies = [
+    "reportlab>=4.0",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["audit_core*"]

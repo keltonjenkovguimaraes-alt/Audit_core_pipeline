@@ -1,0 +1,71 @@
+{
+  "title": "Synthetic Manuscript Audit Demo",
+  "sv_counts": {
+    "DEL": 40,
+    "DUP": 25,
+    "INV": 10,
+    "Total": 80
+  },
+  "confirmation_rates": [
+    {
+      "sv_type": "INV",
+      "confirmed": 9,
+      "total": 12,
+      "reported_pct": 90.0,
+      "reported_ci": null,
+      "location": "Table 3, INV row"
+    },
+    {
+      "sv_type": "DUP_falsepos",
+      "confirmed": 0,
+      "total": 40,
+      "reported_pct": 0.0,
+      "reported_ci": null,
+      "location": "Table 3, DUP false-positive row"
+    },
+    {
+      "sv_type": "DEL",
+      "confirmed": 36,
+      "total": 40,
+      "reported_pct": 92.5,
+      "reported_ci": [0.85, 0.97],
+      "location": "Table 3, DEL row"
+    }
+  ],
+  "definitions": [
+    {
+      "name": "CONFIRMED",
+      "rule": "A call is CONFIRMED if both breakpoint coordinates match ground truth within 50bp AND the SV type matches.",
+      "location": "Methods section 2.3"
+    },
+    {
+      "name": "CONFIRMED",
+      "rule": "A call counts as CONFIRMED if the SV type matches ground truth, including PARTIAL coordinate matches.",
+      "location": "Supplementary Table 3 footnote"
+    }
+  ],
+  "validation_sets": [
+    {
+      "name": "calibration_set",
+      "ids": ["sv_001", "sv_002", "sv_003", "sv_004", "sv_005"],
+      "location": "Methods 2.1",
+      "independent_from": ["truth_set"]
+    },
+    {
+      "name": "truth_set",
+      "ids": ["sv_003", "sv_004", "sv_010", "sv_011", "sv_012"],
+      "location": "Methods 2.2"
+    }
+  ],
+  "layer_scores": [
+    {
+      "name": "layer4_junction_score",
+      "outputs": [0.98, 0.99, 0.98, 1.0, 0.99, 0.98, 0.99, 1.0, 0.98, 0.99],
+      "location": "Layer 4 scoring module, all SVs"
+    }
+  ],
+  "metrics": [
+    {"label": "total_strains", "value": 12, "location": "Abstract"},
+    {"label": "total_strains", "value": 15, "location": "Methods section 2.1"}
+  ]
+}

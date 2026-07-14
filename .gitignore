@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.pdf
+!audit_core/examples/synthetic_audit_report.pdf
+.pytest_cache/
