@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "audit_core: A domain-agnostic numerical audit pipeline"
+authors:
+  - family-names: "Guimaraes"
+    given-names: "Kelton"
+    orcid: "https://orcid.org/0009-0004-6555-1089"
+version: 0.1.0
+date-released: 2026-07-15
+url: "https://github.com/keltonjenkovguimaraes-alt/audit_core_pipeline"
+license: MIT
