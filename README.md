@@ -88,18 +88,7 @@ overlapping "independent" sets, definition drift, and a saturated
 formula) — useful as a sanity check that the pipeline is working before
 wiring in real FUNGUS-SV data.
 
-## Publishing this to GitHub
 
-1. Create an empty repo on GitHub (no README/license — you already have those here).
-2. From this directory:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: audit_core pipeline"
-   git branch -M main
-   git remote add origin https://github.com/keltonjenkovguimaraes-alt/audit_core.git
-   git push -u origin main
-   ```
 3. The included `.github/workflows/ci.yml` will automatically run the
    demo as a smoke test on every push/PR across Python 3.9-3.12 — no
    extra setup needed, GitHub Actions picks it up automatically.
