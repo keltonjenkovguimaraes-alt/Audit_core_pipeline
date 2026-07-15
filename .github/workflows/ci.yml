@@ -19,6 +19,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install package
-        run: pip install -e .
+        run: pip install -e ".[dev]"
+      - name: Run test suite
+        run: pytest audit_core/tests/ -v
       - name: Run demo (smoke test)
         run: python3 audit_core/examples/run_demo.py
