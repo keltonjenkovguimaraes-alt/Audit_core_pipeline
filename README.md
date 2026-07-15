@@ -1,5 +1,5 @@
 # audit_core
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21384059.svg)](https://doi.org/10.5281/zenodo.21384059)
 A domain-agnostic numerical audit pipeline: flags inconsistencies in
 numbers, statistics, and formulas across any results document. It never
 corrects anything — every check produces evidence + a suggested
