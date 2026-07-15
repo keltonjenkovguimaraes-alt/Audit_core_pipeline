@@ -9,14 +9,14 @@ direction, for a human to decide on.
 
 Locally (editable, for development):
 ```bash
-git clone https://github.com/YOUR_USERNAME/audit_core.git
+git clone https://github.com/keltonjenkovguimaraes-alt/audit_core.git
 cd audit_core
 pip install -e .
 ```
 
 Directly from GitHub, without cloning:
 ```bash
-pip install git+https://github.com/YOUR_USERNAME/audit_core.git
+pip install git+https://github.com/keltonjenkovguimaraes-alt/audit_core.git
 ```
 
 ## Structure
@@ -97,12 +97,10 @@ wiring in real FUNGUS-SV data.
    git add .
    git commit -m "Initial commit: audit_core pipeline"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/audit_core.git
+   git remote add origin https://github.com/keltonjenkovguimaraes-alt/audit_core.git
    git push -u origin main
    ```
-3. Update the `authors` field in `pyproject.toml` and the `YOUR_USERNAME`
-   placeholders in this README before pushing.
-4. The included `.github/workflows/ci.yml` will automatically run the
+3. The included `.github/workflows/ci.yml` will automatically run the
    demo as a smoke test on every push/PR across Python 3.9-3.12 — no
    extra setup needed, GitHub Actions picks it up automatically.
 
