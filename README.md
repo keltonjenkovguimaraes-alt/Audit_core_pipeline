@@ -2,7 +2,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21384059.svg)](https://doi.org/10.5281/zenodo.21384059)
 A domain-agnostic numerical audit pipeline: flags inconsistencies in
 numbers, statistics, and formulas across any results document. It never
-corrects anything — every check produces evidence + a suggested
+corrects anything, every check produces evidence + a suggested
 direction, for a human to decide on.
 
 ## Install
@@ -85,12 +85,12 @@ Runs the pipeline against `examples/synthetic_manuscript.json`, a file
 with deliberately planted errors covering every check category (bad
 subtotal, wrong percentage, degenerate CI, cross-location value drift,
 overlapping "independent" sets, definition drift, and a saturated
-formula) — useful as a sanity check that the pipeline is working before
+formula) useful as a sanity check that the pipeline is working before
 wiring in real FUNGUS-SV data.
 
 
 3. The included `.github/workflows/ci.yml` will automatically run the
-   demo as a smoke test on every push/PR across Python 3.9-3.12 — no
+   demo as a smoke test on every push/PR across Python 3.9-3.12 no
    extra setup needed, GitHub Actions picks it up automatically.
 
 ## Contributing a new adapter
