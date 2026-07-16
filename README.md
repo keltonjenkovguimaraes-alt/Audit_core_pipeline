@@ -21,23 +21,23 @@ pip install git+https://github.com/keltonjenkovguimaraes-alt/audit_core.git
 
 ## Structure
 
-- `ingest/schema.py` — canonical data types every check operates on
-- `registry.py` — indexes metrics by label for cross-location checks
-- `formulas/standard.py` — reference implementations (Wilson, Clopper-Pearson,
+- `ingest/schema.py` - canonical data types every check operates on
+- `registry.py` - indexes metrics by label for cross-location checks
+- `formulas/standard.py` - reference implementations (Wilson, Clopper-Pearson,
   rule-of-three, precision/recall/F1) used for comparison only
-- `formulas/custom_specs.py` — register project-specific formula specs
+- `formulas/custom_specs.py` - register project-specific formula specs
   (expected range / expected variance) without touching the formula itself
 - `checks/` — one module per check category:
-  - `arithmetic.py` — subtotal/total and percentage reconciliation
-  - `statistics.py` — missing/degenerate CIs, small-n bare point estimates
-  - `consistency.py` — same metric, different value across locations
-  - `independence.py` — overlap between validation sets claimed independent
-  - `definitions.py` — drift in a named classification rule's definition
+  - `arithmetic.py` - subtotal/total and percentage reconciliation
+  - `statistics.py` - missing/degenerate CIs, small-n bare point estimates
+  - `consistency.py` - same metric, different value across locations
+  - `independence.py` - overlap between validation sets claimed independent
+  - `definitions.py` - drift in a named classification rule's definition
   - `formulas_check.py` — saturation / out-of-range detection for
     registered formula specs
 - `runner.py` — runs all checks, returns aggregated flag-only results
-- `report/pdf_report.py` — renders results into a structured PDF
-- `adapters/fungus_sv.py` — the ONLY FUNGUS-SV-specific file; translates
+- `report/pdf_report.py` - renders results into a structured PDF
+- `adapters/fungus_sv.py` - the ONLY FUNGUS-SV-specific file; translates
   FUNGUS-SV's JSON schema into the canonical types above
 
 ## Usage
@@ -98,4 +98,4 @@ wiring in real FUNGUS-SV data.
 To audit a new kind of results (not FUNGUS-SV), add a file under
 `audit_core/adapters/`, e.g. `adapters/my_domain.py`, that maps your
 source format into the canonical types in `ingest/schema.py`. Open a PR
-— no changes to `checks/` are needed for new domains.
+no changes to `checks/` are needed for new domains.
