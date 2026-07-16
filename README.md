@@ -33,9 +33,9 @@ pip install git+https://github.com/keltonjenkovguimaraes-alt/audit_core.git
   - `consistency.py` - same metric, different value across locations
   - `independence.py` - overlap between validation sets claimed independent
   - `definitions.py` - drift in a named classification rule's definition
-  - `formulas_check.py` — saturation / out-of-range detection for
+  - `formulas_check.py` - saturation / out-of-range detection for
     registered formula specs
-- `runner.py` — runs all checks, returns aggregated flag-only results
+- `runner.py` - runs all checks, returns aggregated flag-only results
 - `report/pdf_report.py` - renders results into a structured PDF
 - `adapters/fungus_sv.py` - the ONLY FUNGUS-SV-specific file; translates
   FUNGUS-SV's JSON schema into the canonical types above
