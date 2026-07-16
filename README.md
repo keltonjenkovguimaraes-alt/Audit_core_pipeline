@@ -72,7 +72,7 @@ generate_pdf(report, "audit_report.pdf")
 Write a new file in `adapters/`, e.g. `adapters/clinical_trial.py`, that
 maps your source format's fields into `MetricValue`, `Proportion`,
 `NamedDefinition`, `ValidationSet`, and `FormulaApplication` objects from
-`ingest/schema.py`. No changes needed anywhere else — every check module
+`ingest/schema.py`. No changes needed anywhere else, every check module
 already operates on those types.
 
 ## Demo
