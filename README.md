@@ -1,4 +1,5 @@
 # audit_core
+[![DOI](https://zenodo.org/badge/1300922656.svg)](https://doi.org/10.5281/zenodo.21384058)
 New adapters will be added either to serve as models or to a real use, only requiring small modifications according to data needing.
 
 A domain-agnostic numerical audit pipeline: flags inconsistencies in
