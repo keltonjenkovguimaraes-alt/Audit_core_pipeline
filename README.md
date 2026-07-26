@@ -3,7 +3,7 @@ New adapters will be added either to serve as models or to a real use, only requ
 
 A domain-agnostic numerical audit pipeline: flags inconsistencies in
 numbers, statistics, and formulas across any results document. It never
-corrects anything — every check produces evidence + a suggested
+corrects anything, every check produces evidence + a suggested
 direction, for a human to decide on.
 
 ## Install
@@ -85,27 +85,29 @@ Runs the pipeline against `examples/synthetic_manuscript.json`, a file
 with deliberately planted errors covering every check category (bad
 subtotal, wrong percentage, degenerate CI, cross-location value drift,
 overlapping "independent" sets, definition drift, and a saturated
-formula) — useful as a sanity check that the pipeline is working before
+formula) useful as a sanity check that the pipeline is working before
 wiring in real FUNGUS-SV data.
 
 ## Publishing this to GitHub
 
-1. Create an empty repo on GitHub (no README/license — you already have those here).
-2. From this directory:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: audit_core pipeline"
-   git branch -M main
-   git remote add origin https://github.com/keltonjenkovguimaraes-alt/audit_core.git
-   git push -u origin main
-   ```
-3. The included `.github/workflows/ci.yml` will automatically run the
-   demo as a smoke test on every push/PR across Python 3.9-3.12 — no
-   extra setup needed, GitHub Actions picks it up automatically.
+1. **Create repository on GitHub**:
+   - Go to https://github.com/new
+   - Name: `audit_core`
+   - **IMPORTANT**: DO NOT initialize with README, .gitignore, or license
+   - Click "Create repository"
+
+2. **From your local directory**:
+```bash
+git init
+git add .
+git commit -m "Initial commit: audit_core pipeline"
+git branch -M main
+git remote add origin git@github.com:keltonjenkovguimaraes-alt/audit_core.git  # Use SSH for easier auth
+git push -u origin main
+
 
 ## Contributing a new adapter
 To audit a new kind of results (not FUNGUS-SV), add a file under
 `audit_core/adapters/`, e.g. `adapters/my_domain.py`, that maps your
 source format into the canonical types in `ingest/schema.py`. Open a PR
-— no changes to `checks/` are needed for new domains.
+no changes to `checks/` are needed for new domains.
