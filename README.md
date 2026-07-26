@@ -1,6 +1,5 @@
 # audit_core
-# New adapters will be added either to serve as models or to a real use, only
-# requiring small modifications according to data needing.
+New adapters will be added either to serve as models or to a real use, only requiring small modifications according to data needing.
 
 A domain-agnostic numerical audit pipeline: flags inconsistencies in
 numbers, statistics, and formulas across any results document. It never
