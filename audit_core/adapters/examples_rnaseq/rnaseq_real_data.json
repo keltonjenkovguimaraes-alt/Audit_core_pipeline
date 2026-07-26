@@ -1,0 +1,41 @@
+{
+  "_provenance": {
+    "paper_doi": "10.1371/journal.pone.0264246",
+    "paper_title": "An evaluation of RNA-seq differential analysis methods",
+    "data_source": "http://bowtie-bio.sourceforge.net/recount/countTables/bottomly_count_table.txt",
+    "code_source": "https://github.com/DongmeiLi2017/RNA-seq-Analysis-Methods-Comparison/blob/master/RNASeq_examples.R",
+    "note": "All values below were read directly from the paper text and the authors' own R script comments. Nothing here is simulated or invented."
+  },
+  "title": "RNA-seq Differential Analysis Methods Comparison (Bottomly et al. mouse strain data)",
+
+  "gene_filtering": {
+    "full_sample": {"total_genes": 36536, "filtered_genes": 11870,
+                     "location": "Paper body text, real-data section (n=10 B6, n=11 D2)"},
+    "subsample_n3": {"total_genes": 36536, "filtered_genes": 10815,
+                      "location": "Paper body text, resampled subset (n=3 per strain)"}
+  },
+
+  "discovery_counts_full_sample": [
+    {"method": "EBSeq",       "count": 378,  "location": "RNASeq_examples.R, final bar chart data"},
+    {"method": "NOISeq",      "count": 409,  "location": "RNASeq_examples.R, final bar chart data"},
+    {"method": "baySeq",      "count": 523,  "location": "RNASeq_examples.R, final bar chart data"},
+    {"method": "DESeq",       "count": 598,  "location": "RNASeq_examples.R, final bar chart data"},
+    {"method": "Voom",        "count": 1037, "location": "RNASeq_examples.R, final bar chart data"},
+    {"method": "edgeR_Exact", "count": 1235, "location": "RNASeq_examples.R, final bar chart data"},
+    {"method": "edgeR_GLM",   "count": 1262, "location": "RNASeq_examples.R, final bar chart data"},
+    {"method": "DESeq2",      "count": 1325, "location": "RNASeq_examples.R, final bar chart data"},
+    {"method": "SAMSeq",      "count": 1775, "location": "RNASeq_examples.R, final bar chart data"}
+  ],
+
+  "discovery_count_reruns": [
+    {"method": "DESeq2", "count": 1314, "location": "RNASeq_examples.R, DESeq2 section, comment run A"},
+    {"method": "baySeq", "count": 521,  "location": "RNASeq_examples.R, baySeq section, comment run A"},
+    {"method": "baySeq", "count": 519,  "location": "RNASeq_examples.R, baySeq section, comment run B"},
+    {"method": "SAMSeq", "count": 1968, "location": "RNASeq_examples.R, SAMSeq section, comment run A"},
+    {"method": "SAMSeq", "count": 1933, "location": "RNASeq_examples.R, SAMSeq section, comment run B"},
+    {"method": "SAMSeq", "count": 1727, "location": "RNASeq_examples.R, SAMSeq section, comment run C"},
+    {"method": "SAMSeq", "count": 1779, "location": "RNASeq_examples.R, SAMSeq section, comment run D"}
+  ],
+
+  "denominator_full_sample": 11870
+}
